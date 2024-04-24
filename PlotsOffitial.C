@@ -89,7 +89,7 @@ void PlotsOffitial()
      analyzer.AddVariable(var_njets);
      analyzer.AddVariable(var_meff);
 
-     //Adding physics processes (the other is the same order that will be shown at the histograms):
+     //Adding physics processes (the order is the same order that will be shown in the histograms):
      //- background processes will be stacked
      analyzer.AddProcess("InputList/Bkg.txt","OtherMultiboson","OtherMultiboson",kGreen+2,1,"isBkg",false,"","","OtherMultiboson_nom",3);
      analyzer.AddProcess("InputList/Bkg.txt","ttH","ttH",kOrange,1,"isBkg",false,"","","ttH_nom",3); 
