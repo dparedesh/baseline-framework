@@ -278,8 +278,8 @@ analyzer.doRatioDataBkg = true
 The resulting plot is shown at the bottom of the canvas in Figure 3.  
 
 <p align="center">
-<a href="url"><img src="https://github.com/dparedesh/baseline-framework/assets/13987503/3aeff934-ba9a-4d0a-912f-631d23396d90" align="center" height="210"  ></a>
-<a href="url"><img src="https://github.com/dparedesh/baseline-framework/assets/13987503/144ecb0e-fa0e-4f27-8a68-de618f01d632" align="center" height="210"  ></a>
+<a href="url"><img src="https://github.com/dparedesh/baseline-framework/assets/13987503/3aeff934-ba9a-4d0a-912f-631d23396d90" align="center" height="230"  ></a>
+<a href="url"><img src="https://github.com/dparedesh/baseline-framework/assets/13987503/144ecb0e-fa0e-4f27-8a68-de618f01d632" align="center" height="230"  ></a>
 </p>
 <h4 align="center"><sub>Figure 3: Examples of 1D distributions created with `Tools` showing the ratio of the  data and the total background. </sup></h4>  
 
@@ -322,17 +322,45 @@ The final plots will look like the ones shown in Figure 5.
 <h4 align="center"><sub>Figure 5: Examples of 1D distributions showing the shape comparison of the different physics processes. Distributions are normalized to unit.  </sup></h4>  
 
 
-
+<br/><br/>
 
 ### 2D distributions:
 
-Functionality for plotting 2D distributions is also available. Examples of those distributions look like the ones below
+Functionality for plotting 2D distributions is also available. It can be obtained the passing the variables to be plotted to the following function of the analyzer:
+
+```cpp
+ AddVariable2D(VariableDistr* var_x,VariableDistr* var_y)
+ ```
+
+Examples of 2D distributions obtained with the tool are shown in Figure 6.
 
 <p align="center">
-<a href="url"><img src="https://github.com/dparedesh/baseline-framework/assets/13987503/9b35bca8-c513-4090-952f-b31c17fa4e20" align="center" height="200"  ></a>
-<a href="url"><img src="https://github.com/dparedesh/baseline-framework/assets/13987503/83a33a45-6637-4d92-bbe9-7ebff2f538a0" align="center" height="200"  ></a>
+<a href="url"><img src="https://github.com/dparedesh/baseline-framework/assets/13987503/9b35bca8-c513-4090-952f-b31c17fa4e20" align="center" height="220"  ></a>
+<a href="url"><img src="https://github.com/dparedesh/baseline-framework/assets/13987503/83a33a45-6637-4d92-bbe9-7ebff2f538a0" align="center" height="220"  ></a>
 </p>
-<h4 align="center"><sub>Figure 2: Examples of 2D distributions created with `Tools` </sup></h4>  
+<h4 align="center"><sub>Figure 6: Examples of 2D distributions created with `Tools` </sup></h4>  
+
+<br/><br/>
+
+### Tables
+
+If requested, the tool will provide the yield tables in Latex format. Those yiels will include not only the nominal counting but also the statistical and systematic uncertainties for every physics process and the total background. This can be done by calling the following function when setting the analyzer:
+
+```cpp
+ SaveYieldsTables(bool save,TString folder="Tables")
+```
+where `folder` indicates the directory where the tables will be saved.  The table produced looks like the one shown in Figure 7.
+
+<p align="center">
+<a href="url"><img src="https://github.com/dparedesh/baseline-framework/assets/13987503/f996f866-c13d-4270-a743-cac5c9692715" align="center" height="220"  ></a>
+</p>
+<h4 align="center"><sub>Figure 7: Table generated with `Tools` containing the nominal event counting and its statistical and systematic uncertainty. Values are computed for every  process and for every decay channel (data selection). The total expected background is also computed. The number of observed events in data is also shown. </sup></h4>  
+
+
+
+
+
+<br/><br/>
 
 
 ### Optimization of data selection: 
@@ -345,7 +373,7 @@ A script can be also created inputing `strings` in a template macro as the examp
 </p>
 <h4 align="center"><sub>Figure 3: Upper limits computed at 95% CL on the production rate of the hypothetical particle. The data selected with `Tools` have been used to perform the statistical interpretation</sup></h4>  
 
-### Tables
+
 
 
 ## Official results obtained with this tool..
