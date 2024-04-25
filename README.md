@@ -1,5 +1,5 @@
 ## Introduction
-This tool was developed to perform data selection and data visualization, and it has been used to analyze the data taken by the ATLAS detector from the proton-proton collisions at the Large Hadron Collider (LHC) at CERN. The tool has been developed on top of the [ROOT Data Analysis Framework](https://root.cern/), a high-performance software written mainly in C++. 
+This tool was developed to perform data selection and data visualization, and it has been used to analyze the data taken by the *ATLAS* detector from the proton-proton collisions at the *Large Hadron Collider (LHC)* at *CERN*. The tool has been developed on top of the [ROOT Data Analysis Framework](https://root.cern/), a high-performance software written mainly in C++. 
 
 ## Description
 
@@ -159,7 +159,7 @@ The `MiniTreeAnalyzer` needs a minimum input to run:
     ```     
     where `folder` is the name of the directory where the .root files will be saved.
 
-  - ATLAS Collaboration requires labeling the plots according to the approval level in the collaboration. It also requires to show the integrated luminosity used for the data sample. This is done with the following functions:
+  - *ATLAS Collaboration* requires labeling the plots according to the approval level in the collaboration. It also requires to show the integrated luminosity used for the data sample. This is done with the following functions:
  
     ```cpp
 
@@ -302,6 +302,9 @@ The resulting plot is shown in Figure 4.
 <h4 align="center"><sub>Figure 4: Examples of 1D distributions created with `Tools` showing the significance of observing `n` data events given the background prediction in each bin of the histogram. </sup></h4>  
 
 
+<br/><br/>
+
+
 #### Comparing shapes
 
 One of the most common things when comparing different physics processes is comparing their shape, while keeping the histograms normalized to unit. This can be done by setting the option 
@@ -352,7 +355,7 @@ If requested, the tool will provide the yield tables in Latex format. Those yiel
 where `folder` indicates the directory where the tables will be saved.  The table produced looks like the one shown in Figure 7.
 
 <p align="center">
-<a href="url"><img src="https://github.com/dparedesh/baseline-framework/assets/13987503/f996f866-c13d-4270-a743-cac5c9692715" align="center" height="220"  ></a>
+<a href="url"><img src="https://github.com/dparedesh/baseline-framework/assets/13987503/f996f866-c13d-4270-a743-cac5c9692715" align="center" height="180"  ></a>
 </p>
 <h4 align="center"><sub>Figure 7: Table generated with `Tools` containing the nominal event counting and its statistical and systematic uncertainty. Values are computed for every  process and for every decay channel (data selection). The total expected background is also computed. The number of observed events in data is also shown. </sup></h4>  
 
@@ -363,16 +366,78 @@ where `folder` indicates the directory where the tables will be saved.  The tabl
 <br/><br/>
 
 
-### Optimization of data selection: 
+### Optimization of data selection using the signal significance: 
 
-A script can be also created inputing `strings` in a template macro as the example given here. The significance  computed as , can be used to find the best selection that maximize the separation between the signal produced by a new particle and the one below.  The results obtained with this selection can be used to perform a statitical interpretation of the data, by computing the 95% CL upper limits on the production rate of the hypothetical particle. Examples of those limits can be found below.  
+
+One of the standard methods to find the optimal selection to be applied to the samples is maximizing the signal significance. To compute the significance of every signal hypothesis for every channel you must call the following function in the analyzer before the execution:
+
+```cpp
+SetSignificance(double rel_syst=0.3,bool root_sig=true,bool stat_forum=false)
+```
+
+where 
+
+- `rel_syst:` Relative value of the systematic uncertainty to be applied to the total background. 
+- `root_sig:` Significance as computed by ROOT with the function `RooStats::NumberCountingUtils::BinomialExpZ()`. This is the default value as it allows a fast execution of the program.
+- `stat_forum:` This is the  recommended way to compute the significance. However, it is computationally more expensive. The significance is computed as recommended by the *ATLAS Statistical Forum*  in [Formulae for Estimating Significance](https://cds.cern.ch/record/2736148?ln=es)
+
+
+<p align="center">
+<a href="url"><img src="https://github.com/dparedesh/baseline-framework/assets/13987503/25e02a50-7189-4a98-8c49-b923200ff8bc" align="center" height="90"  ></a>
+</p>
+
+   where $n$ is the number of signal + background events, $b$ is the total background, and $\sigma$ is the total uncertainty on the background. 
+  
+ <br/><br/>
+ After the execution step, you will have access to the `PhysicsProcess` objects created during the execution. You can get the significance for every signal hypothesis and for every channel by using the following code: 
+
+```cpp
+vector<PhysicsProcess*> Processes=analyzer.GetPhysicsProcesses();
+vector<Channel*> Channels=analyzer.GetChannels();
+std::map<TString,Yields*> Bkg=analyzer.TotalBkg;
+std::map< TString,std::map<TString,double> > v_Significances=analyzer.RootSignificance;
+
+
+for (unsigned int j=0; j<Channels.size(); j++){
+        std::cout << "--- In channel : " << Channels[j]->GetName() << std::endl;
+        PrintOutput(Channels[j],Processes,Bkg,v_Significances);
+}
+```
+
+where the function `PrintOutput(<args>)` can be defined as:
+
+```cpp
+
+void PrintOutput(Channel *Channels,vector<PhysicsProcess*> Processes,
+                 std::map<TString,Yields*> Bkg,
+                 std::map<TString,std::map<TString,double> > v_Significances){
+     
+     for (unsigned int i=0; i<Processes.size(); i++){
+
+          std::cout << "-- Process :" << Processes[i]->GetTitle() <<
+                       ",  yield: "   << Processes[i]->GetYield(Channels->GetName()) <<
+                       "+/-"          << Processes[i]->GetStatistical(Channels->GetName())  << std::endl;
+
+          if (Processes[i]->isDataSigBkg()=="isSig"){
+             std::cout << "..... Significance: " << v_Significances[Processes[i]->GetName()][Channels->GetName()] << std::endl;
+          }
+     } 
+
+     return;
+}
+
+```
+
+
+At this point, it is important to remember that what makes a channel different from another is the *selection applied to the samples*. Thus, different selections will output different significances. The goal is to find the selection that maximizes the significance.  
+
+You can create different channels by scanning the values of the variables of interest and building a channel for every different selection. A script that loops over different channels and inputs that channel to a template macro that computes the significance can be used for this scan. The selection that maximizes the significance is the one that will be used to provide the final results. The statistical interpretation is then performed for the selected data by computing the 95% CL upper limits on the production rate of the hypothetical particle. Examples of those upper limits can be seen in Figure 8.  
 
 <p align="center">
 <a href="url"><img src="https://github.com/dparedesh/baseline-framework/assets/13987503/76ee9a09-dd95-4526-ac4f-22bf5dd7d276" align="center" height="200"  ></a>
 <a href="url"><img src="https://github.com/dparedesh/baseline-framework/assets/13987503/596802b8-39f8-4197-8ef8-7c40f8103ce6" align="center" height="200"  ></a>
 </p>
-<h4 align="center"><sub>Figure 3: Upper limits computed at 95% CL on the production rate of the hypothetical particle. The data selected with `Tools` have been used to perform the statistical interpretation</sup></h4>  
-
+<h4 align="center"><sub>Figure 8: Upper limits computed at 95% CL on the production rate of the hypothetical particle. The data selection obtained with `Tools` has been used to perform the statistical interpretation</sup></h4>  
 
 
 
