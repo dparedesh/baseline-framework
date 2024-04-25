@@ -235,26 +235,82 @@ Example:
 
 ### 1D distributions:
 
-Examples of plotting 1D distributions can be seen in Figure 1. By default, when plotting the signal hypothesis this one is overlaid over the background (Figure 1 (left)). However, the tool provides an option to plot the signal hypothesis stacked over the background by setting the attribute
 
-        analyzer.doStackSignal = true  
-        
-in the `MiniTreeAnalyzer` (Figure 1 (middle)). When plotting real data and the expected background, it is useful to check for the compatibility of those. This can be done by computing the ratio of data over expected background by setting the option  
-
-        analyzer.doRatioDataBkg = true
-
-or by computing the significance of observing `n` data events given the background prediction in each bin of the histogram with
-
-        analyzer.doSignificance = true
-
-The resulting plot is shown at the bottom of the canvas (Figure 1 (right)). 
+Examples of the default 1D distributions can be seen in Figure 1.   By default, when plotting the signal hypothesis this one is overlaid over the background. 
 
 <p align="center">
 <a href="url"><img src="https://github.com/dparedesh/baseline-framework/assets/13987503/1f626a01-fa09-49a6-834b-faca2d1efd1f" align="center" height="200"  ></a>
-<a href="url"><img src="https://github.com/dparedesh/baseline-framework/assets/13987503/d4f9488a-2086-4d58-95a3-4e6ccd2daca3" align="center" height="200"  ></a>
-<a href="url"><img src="https://github.com/dparedesh/baseline-framework/assets/13987503/0840a069-6610-491f-a4c0-954371be8123" align="center" height="190"  ></a>
+<a href="url"><img src="https://github.com/dparedesh/baseline-framework/assets/13987503/273f3723-bb4d-4a4c-a1c5-02fbdf8fbd39" align="center" height="200"  ></a>
 </p>
-<h4 align="center"><sub>Figure 1: Examples of 1D distributions created with `Tools` </sup></h4>  
+<h4 align="center"><sub>Figure 1: Examples of the default 1D distributions created with `Tools`. The signal is represented by the blue dotted line.  </sup></h4>  
+
+ <br/><br/> 
+
+
+ However, the tool provides an option to plot the signal hypothesis stacked over the background by setting the attribute
+
+ ```cpp        
+ analyzer.doStackSignal = true  
+ ```
+
+in the `MiniTreeAnalyzer`. An example showing the result can be seen in Figure 2. 
+
+<p align="center">
+<a href="url"><img src="https://github.com/dparedesh/baseline-framework/assets/13987503/a37d261b-f24d-45e4-a36e-f1ee8a46279d" align="center" height="190"  ></a>
+<a href="url"><img src="https://github.com/dparedesh/baseline-framework/assets/13987503/d4f9488a-2086-4d58-95a3-4e6ccd2daca3" align="center" height="200"  ></a>
+</p>
+<h4 align="center"><sub>Figure 2: Examples of 1D distributions created with `Tools` using stacked signal hypothesis. The signal is represented by shaded histograms stacked on top of the total background. </sup></h4>  
+
+
+
+<br/><br/> 
+When plotting real data and the expected background, it is useful to check for their compatibility. This can be done by computing the ratio of data over the expected background by setting the option  
+
+ ```cpp
+analyzer.doRatioDataBkg = true
+ ```
+The resulting plot is shown at the bottom of the canvas in Figure 3.  
+
+<p align="center">
+<a href="url"><img src="https://github.com/dparedesh/baseline-framework/assets/13987503/3aeff934-ba9a-4d0a-912f-631d23396d90" align="center" height="200"  ></a>
+<a href="url"><img src="https://github.com/dparedesh/baseline-framework/assets/13987503/144ecb0e-fa0e-4f27-8a68-de618f01d632" align="center" height="200"  ></a>
+</p>
+<h4 align="center"><sub>Figure 3: Examples of 1D distributions created with `Tools` showing the ratio of the  data and the total background. </sup></h4>  
+
+
+<br/><br/> 
+
+A more elegant way to check for the compatibility between the data and the total background can be obtained by computing the **significance** of observing `n` data events given the background prediction in each bin of the histogram. This can be done by setting the following option in the analyzer:
+
+ ```cpp
+ analyzer.doSignificance = true
+ ```
+
+The resulting plot is shown in Figure 4. 
+<p align="center">
+<a href="url"><img src="https://github.com/dparedesh/baseline-framework/assets/13987503/0840a069-6610-491f-a4c0-954371be8123" align="center" height="200"  ></a>
+<a href="url"><img src="https://github.com/dparedesh/baseline-framework/assets/13987503/3506e95d-1d61-47f7-9c27-ff7ba7e92b05" align="center" height="200"  ></a>
+</p>
+<h4 align="center"><sub>Figure 4: Examples of 1D distributions created with `Tools` showing the significance of observing `n` data events given the background prediction in each bin of the histogram. </sup></h4>  
+
+One of the most common things when comparing different physics processes is comparing their shape, while keeping the histograms normalized to unit. This can be done by setting the option 
+
+ ```cpp
+ analyzer.BuildShapesNormalized()  //for histos normalized to unit
+ analyzer.BuildShapes()            //if no normalization needs to be applied
+ ```
+
+The final plots will look like the ones shown in Figure 5. 
+
+<br/><br/>
+
+<p align="center">
+<a href="url"><img src="https://github.com/dparedesh/baseline-framework/assets/13987503/36015733-235e-4a1f-b921-04f2ac1cbb11" align="center" height="200"  ></a>
+<a href="url"><img src="https://github.com/dparedesh/baseline-framework/assets/13987503/4840fcf6-9bf3-4be1-8fc2-1fb940699959" align="center" height="200"  ></a>
+</p>
+<h4 align="center"><sub>Figure 5: Examples of 1D distributions showing the shape comparison of the different physics processes. Distributions are normalized to unit.  </sup></h4>  
+
+
 
 
 ### 2D distributions:
