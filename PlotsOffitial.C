@@ -120,7 +120,7 @@ void PlotsOffitial()
      analyzer.SaveYieldsTables(true,"Tables");
      //analyzer.SetSystematicVariations(false,"Syst_shape_listWZ.txt","Syst_norm_short.txt","TheoryUnc.root","OutputSystematics"); //"Syst_norm_list.txt","OutputSystShapes");
 
-     analyzer.doCutflow=false;
+     //analyzer.doCutflow=false;
 
      // Finally: execute the analyzer to get the final plots and tables
      analyzer.Execute();
