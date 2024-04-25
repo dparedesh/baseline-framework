@@ -108,7 +108,7 @@ The `MiniTreeAnalyzer` needs a minimum input to run:
   ```
   where
 
-  - `name`: Internal identifier of the physics process.
+  - `name`: File containing the list of samples (file format must be in .root). Examples of the lists to be provided can be found [here](https://github.com/dparedesh/baseline-framework/tree/master/InputList)
   - `title`: Name of the object shown at the terminal when running.
   - `latex`: Custom name shown in the plot legend.
   - `color`: Integer referencing the colors in [TColor](https://root.cern.ch/doc/master/classTColor.html)
