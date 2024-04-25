@@ -437,19 +437,27 @@ You can create different channels by scanning the values of the variables of int
 <a href="url"><img src="https://github.com/dparedesh/baseline-framework/assets/13987503/76ee9a09-dd95-4526-ac4f-22bf5dd7d276" align="center" height="200"  ></a>
 <a href="url"><img src="https://github.com/dparedesh/baseline-framework/assets/13987503/596802b8-39f8-4197-8ef8-7c40f8103ce6" align="center" height="200"  ></a>
 </p>
-<h4 align="center"><sub>Figure 8: Upper limits computed at 95% CL on the production rate of the hypothetical particle. The data selection obtained with `Tools` has been used to perform the statistical interpretation</sup></h4>  
+
+<p align="center">
+<a href="url"><img src="https://github.com/dparedesh/baseline-framework/assets/13987503/1ca9275d-2c23-4309-b0a3-89a32b0e874e" align="center" height="220"  ></a>
+<a href="url"><img src="https://github.com/dparedesh/baseline-framework/assets/13987503/837b2115-7362-498c-8cd3-0b06f0ac7dc2" align="center" height="220"  ></a>      
+</p>
+<h4 align="center"><sub>Figure 8: Upper limits computed at 95% CL on the production rate of the hypothetical particle. The data selection obtained with `Tools` has been used to perform the statistical interpretation. </sup></h4>  
 
 
+<br/><br/>
 
 ## Official results obtained with this tool..
 
 The tool has been used to produce the official results of the following paper publications:
 
-- [JHEP 02 (2024) 107](https://inspirehep.net/literature/2673888)
-- [JHEP 11 (2023) 150 ](https://link.springer.com/article/10.1007/JHEP11(2023)150)
-- [Phys. Rev. D 100 (2019) 012006](https://inspirehep.net/literature/1711261)
-- [JHEP 06 (2018) 166](https://link.springer.com/article/10.1007/JHEP06(2018)166)
-- [Phys. Rev. D 92 (2015) 092001](https://inspirehep.net/literature/1373520)
+- [JHEP 02 (2024) 107](https://inspirehep.net/literature/2673888): Search for pair production of squarks or gluinos decaying via sleptons or weak bosons in final states with two same-sign or three leptons with the ATLAS detector.
+- [JHEP 07 (2023) 203](https://link.springer.com/article/10.1007/JHEP07(2023)203): Search for $t\bar tH/A \rightarrow t\bar tt\bar t$ production in the multilepton final state in proton-proton collisions at $\sqrt s =13$ TeV with the ATLAS detector.
+- [JHEP 11 (2023) 150 ](https://link.springer.com/article/10.1007/JHEP11(2023)150): Search for direct production of winos and higgsinos in events with two same-charge leptons or three leptons in pp collision data at $\sqrt s =13$ TeV with the ATLAS detector.
+- [JHEP 06 (2020) 046](https://link.springer.com/article/10.1007/JHEP06(2020)046): Search for squarks and gluinos in final states with same-sign leptons and jets using 139 $fb^{−1}$ of data collected with the ATLAS detector.
+- [Phys. Rev. D 100 (2019) 012006](https://inspirehep.net/literature/1711261): Search for chargino and neutralino production in final states with a Higgs boson and missing transverse momentum at $\sqrt s =13$ TeV with the ATLAS detector.
+- [JHEP 06 (2018) 166](https://link.springer.com/article/10.1007/JHEP06(2018)166): Search for Higgs boson decays to beyond-the-Standard-Model light bosons in four-lepton events with the ATLAS detector $\sqrt s =13$ TeV.
+- [Phys. Rev. D 92 (2015) 092001](https://inspirehep.net/literature/1373520): Search for new light gauge bosons in Higgs boson decays to four-lepton final states in $pp$ collisions at $\sqrt s =13$ TeV with the ATLAS detector at the LHC.
 
 
 
