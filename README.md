@@ -3,7 +3,7 @@ This tool was developed to perform data selection and data visualization, and it
 
 ## Description
 
-The tool consists of several classes. The ones at the forefront of the user are:
+The tool consists of several classes. All of them can be found in the [Tools](https://github.com/dparedesh/baseline-framework/tree/master/Tools) directory of this repository. The ones at the forefront of the user are:
 
 - `Channel`:  It describes the selection to be applied to the samples.
 - `VariableDistr`: The variables used to create the plots.
