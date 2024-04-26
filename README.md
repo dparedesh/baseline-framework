@@ -447,7 +447,7 @@ You can create different channels by scanning the values of the variables of int
 
 <br/><br/>
 
-## Official results obtained with this tool..
+## Official results obtained with this tool...
 
 The tool has been used to produce the official results of the following paper publications:
 
