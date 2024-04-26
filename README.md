@@ -14,9 +14,9 @@ After executing the tool you get access to additional objects created during exe
 - `PhysicsProcess`: It corresponds to one or more samples that are summed up and treated equally when adding the process to the `MiniTreeAnalyzer` (see later). 
 - `Yields`: It holds the number of events for every physics process, together with its statistical and systematic uncertainty. 
 
-## Setting the tool:
+## Setting the tool
 
-### Creating a `Channel`:
+### Creating a `Channel`
 
 A channel is created using the following syntax:
 
@@ -39,7 +39,7 @@ Channel *ch_Rpc2L0b = new Channel("Rpc2L0b","Rpc2L0b",Rpc2L0b);
 ```
 
 
-### Creating a `VariableDistr`:
+### Creating a `VariableDistr`
 
 A variable is created with the following syntax:
 
@@ -108,11 +108,11 @@ The `MiniTreeAnalyzer` needs a minimum input to run:
   ```
   where
 
-  - `name`: File containing the list of samples (file format must be in .root). Examples of the lists to be provided can be found [here](https://github.com/dparedesh/baseline-framework/tree/master/InputList)
+  - `name`: File containing the list of samples (the samples must be in the format .root). Examples of the lists to be provided can be found [here](https://github.com/dparedesh/baseline-framework/tree/master/InputList).
   - `title`: Name of the object shown at the terminal when running.
   - `latex`: Custom name shown in the plot legend.
   - `color`: Integer referencing the colors in [TColor](https://root.cern.ch/doc/master/classTColor.html)
-  - `process`: It can have three different values: `"isSig"`, `"isBkg"`, and `"isData"`. Depending on the option provided the physics process will be plotted in a different style, i.e.
+  - `process`: It can have three different values: `"isSig"`, `"isBkg"`, or `"isData"`. Depending on the option provided the physics process will be plotted in a different style, i.e.
  
     - `isSig`: The physics process will be shown as a line overlaid to the background distribution.
     - `isBkg`: The physics process will be stacked for all background processes. Histograms will be color-filled.
@@ -124,34 +124,34 @@ The `MiniTreeAnalyzer` needs a minimum input to run:
  
 - Additional settings: Depending on what you want to do, you will need to set extra options in the `MiniTreeAnalyzer`. The most usual are:
 
-  - Weight to be applied to all samples of simulated events:
+  - Apply a weight to the samples: In general, all samples generated via Montecarlo simulation must be weighted accordingly. This can be done via the function:
 
     ```cpp
     
     AddWeight(TString weight)
     ```
-  - By default, the tool is used to print the number of events per variable and per channel. If you wish to show the distributions you must tell it to the analyzer via the attribute
+  - Plot distributions: By default, the tool prints the number of events per variable and channel. If you wish to *show* the distributions you must tell it to the analyzer via the attribute
 
     ```cpp
     
     doPlotDistributions = true
     ```
-  - Plots can be saved if requested. This is done with the following function:
+  - Save plots: Plots can be saved if requested. This is done with the following function:
  
     ```cpp
     
     SavePlots(bool save,TString folder)
     ```
-    where `folder` is the directory where the plots will be saved.
+    where `folder` is the directory where the plots will be saved. Plots will be saved in different formats. 
 
-  - A log version of the plots can be performed if requested. It must be done via the attribute
+  - Log plots: A log version of the plots can be done if requested. It must be done via the attribute
 
     ```cpp
    
     doLogPlots = true
 
     ```  
-  - Histograms in ROOT format can be saved if requested via the function:
+  - Save histograms: Histograms in ROOT format can be saved if requested via the function:
 
     ```cpp
  
@@ -159,14 +159,14 @@ The `MiniTreeAnalyzer` needs a minimum input to run:
     ```     
     where `folder` is the name of the directory where the .root files will be saved.
 
-  - *ATLAS Collaboration* requires labeling the plots according to the approval level in the collaboration. It also requires to show the integrated luminosity used for the data sample. This is done with the following functions:
+  - Show *ATLAS label and luminosity*: *ATLAS Collaboration* requires labeling the plots according to the approval level in the collaboration. It also requires to show the integrated luminosity used for the data sample. This is done with the following functions:
  
     ```cpp
 
     SetATLASLabel("Internal");
     SetLuminosity(139,"139 fb^{-1}");    
     ```
-  - For debugging and print more information, it is useful to set the following function:
+  - Print debug info: For debugging and printing more information, it is useful to set the following function:
 
     ```cpp     
     SetDebugLevel(int debug=0) 
@@ -233,10 +233,10 @@ Example:
 
 ## Output of the tool and more custom options
 
-### 1D distributions:
+### 1D distributions
 
 
-#### Default output:
+#### Default output
 
 Examples of the default 1D distributions can be seen in Figure 1.   By default, when plotting the signal hypothesis this one is overlaid over the background. 
 
@@ -249,7 +249,7 @@ Examples of the default 1D distributions can be seen in Figure 1.   By default, 
  <br/><br/> 
 
 
-#### Stacked signal:
+#### Stacked signal
  
  The tool provides an option to plot the signal hypothesis stacked over the background by setting the attribute
 
@@ -327,7 +327,7 @@ The final plots will look like the ones shown in Figure 5.
 
 <br/><br/>
 
-### 2D distributions:
+### 2D distributions
 
 Functionality for plotting 2D distributions is also available. It can be obtained the passing the variables to be plotted to the following function of the analyzer:
 
@@ -366,7 +366,7 @@ where `folder` indicates the directory where the tables will be saved.  The tabl
 <br/><br/>
 
 
-### Optimization of data selection using the signal significance: 
+### Optimization of data selection using the signal significance 
 
 
 One of the standard methods to find the optimal selection to be applied to the samples is maximizing the signal significance. To compute the significance of every signal hypothesis for every channel you must call the following function in the analyzer before the execution:
@@ -379,7 +379,7 @@ where
 
 - `rel_syst:` Relative value of the systematic uncertainty to be applied to the total background. 
 - `root_sig:` Significance as computed by ROOT with the function `RooStats::NumberCountingUtils::BinomialExpZ()`. This is the default value as it allows a fast execution of the program.
-- `stat_forum:` This is the  recommended way to compute the significance. However, it is computationally more expensive. The significance is computed as recommended by the *ATLAS Statistical Forum*  in [Formulae for Estimating Significance](https://cds.cern.ch/record/2736148?ln=es)
+- `stat_forum:` This is the  recommended way to compute the significance. However, it is computationally more expensive. The significance is computed as recommended by the *ATLAS Statistical Forum*  in [Formulae for Estimating Significance](https://cds.cern.ch/record/2736148?ln=es):
 
 
 <p align="center">
