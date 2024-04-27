@@ -244,10 +244,9 @@ Examples of the default 1D distributions can be seen in Figure 1.   By default, 
 <a href="url"><img src="https://github.com/dparedesh/baseline-framework/assets/13987503/1f626a01-fa09-49a6-834b-faca2d1efd1f" align="center" height="210"  ></a>
 <a href="url"><img src="https://github.com/dparedesh/baseline-framework/assets/13987503/273f3723-bb4d-4a4c-a1c5-02fbdf8fbd39" align="center" height="210"  ></a>
 </p>
-<h4 align="center"><sub>Figure 1: Examples of the default 1D distributions created with `Tools`. The signal is represented by the blue dotted line.  </sup></h4>  
+<h4 align="center"><sub>Figure 1: Examples of the default 1D distributions created with `Tools`. The signal is represented by the blue dotted line. Source [7].  </sup></h4>  
 
  <br/><br/> 
-
 
 #### Stacked signal
  
@@ -263,7 +262,7 @@ in the `MiniTreeAnalyzer`. An example showing the result can be seen in Figure 2
 <a href="url"><img src="https://github.com/dparedesh/baseline-framework/assets/13987503/a37d261b-f24d-45e4-a36e-f1ee8a46279d" align="center" height="190"  ></a>
 <a href="url"><img src="https://github.com/dparedesh/baseline-framework/assets/13987503/d4f9488a-2086-4d58-95a3-4e6ccd2daca3" align="center" height="200"  ></a>
 </p>
-<h4 align="center"><sub>Figure 2: Examples of 1D distributions created with `Tools` using stacked signal hypothesis. The signal is represented by shaded histograms stacked on top of the total background. </sup></h4>  
+<h4 align="center"><sub>Figure 2: Examples of 1D distributions created with `Tools` using stacked signal hypothesis. The signal is represented by shaded histograms stacked on top of the total background. Source [6]. </sup></h4>  
 
 
 <br/><br/> 
@@ -281,7 +280,7 @@ The resulting plot is shown at the bottom of the canvas in Figure 3.
 <a href="url"><img src="https://github.com/dparedesh/baseline-framework/assets/13987503/3aeff934-ba9a-4d0a-912f-631d23396d90" align="center" height="230"  ></a>
 <a href="url"><img src="https://github.com/dparedesh/baseline-framework/assets/13987503/144ecb0e-fa0e-4f27-8a68-de618f01d632" align="center" height="230"  ></a>
 </p>
-<h4 align="center"><sub>Figure 3: Examples of 1D distributions created with `Tools` showing the ratio of the  data and the total background. </sup></h4>  
+<h4 align="center"><sub>Figure 3: Examples of 1D distributions created with `Tools` showing the ratio of the  data and the total background. Source [5]. </sup></h4>  
 
 
 <br/><br/> 
@@ -299,7 +298,7 @@ The resulting plot is shown in Figure 4.
 <a href="url"><img src="https://github.com/dparedesh/baseline-framework/assets/13987503/0840a069-6610-491f-a4c0-954371be8123" align="center" height="200"  ></a>
 <a href="url"><img src="https://github.com/dparedesh/baseline-framework/assets/13987503/3506e95d-1d61-47f7-9c27-ff7ba7e92b05" align="center" height="200"  ></a>
 </p>
-<h4 align="center"><sub>Figure 4: Examples of 1D distributions created with `Tools` showing the significance of observing `n` data events given the background prediction in each bin of the histogram. </sup></h4>  
+<h4 align="center"><sub>Figure 4: Examples of 1D distributions created with `Tools` showing the significance of observing `n` data events given the background prediction in each bin of the histogram. Source [7]. </sup></h4>  
 
 
 <br/><br/>
@@ -322,7 +321,7 @@ The final plots will look like the ones shown in Figure 5.
 <a href="url"><img src="https://github.com/dparedesh/baseline-framework/assets/13987503/36015733-235e-4a1f-b921-04f2ac1cbb11" align="center" height="210"  ></a>
 <a href="url"><img src="https://github.com/dparedesh/baseline-framework/assets/13987503/4840fcf6-9bf3-4be1-8fc2-1fb940699959" align="center" height="210"  ></a>
 </p>
-<h4 align="center"><sub>Figure 5: Examples of 1D distributions showing the shape comparison of the different physics processes. Distributions are normalized to unit.  </sup></h4>  
+<h4 align="center"><sub>Figure 5: Examples of 1D distributions showing the shape comparison of the different physics processes. Distributions are normalized to unit. Source [2]. </sup></h4>  
 
 
 <br/><br/>
@@ -341,7 +340,7 @@ Examples of 2D distributions obtained with the tool are shown in Figure 6.
 <a href="url"><img src="https://github.com/dparedesh/baseline-framework/assets/13987503/9b35bca8-c513-4090-952f-b31c17fa4e20" align="center" height="220"  ></a>
 <a href="url"><img src="https://github.com/dparedesh/baseline-framework/assets/13987503/83a33a45-6637-4d92-bbe9-7ebff2f538a0" align="center" height="220"  ></a>
 </p>
-<h4 align="center"><sub>Figure 6: Examples of 2D distributions created with `Tools` </sup></h4>  
+<h4 align="center"><sub>Figure 6: Examples of 2D distributions created with `Tools`. Source [7]. </sup></h4>  
 
 <br/><br/>
 
@@ -442,7 +441,7 @@ You can create different channels by scanning the values of the variables of int
 <a href="url"><img src="https://github.com/dparedesh/baseline-framework/assets/13987503/1ca9275d-2c23-4309-b0a3-89a32b0e874e" align="center" height="220"  ></a>
 <a href="url"><img src="https://github.com/dparedesh/baseline-framework/assets/13987503/837b2115-7362-498c-8cd3-0b06f0ac7dc2" align="center" height="220"  ></a>      
 </p>
-<h4 align="center"><sub>Figure 8: Upper limits computed at 95% CL on the production rate of the hypothetical particle. The data selection obtained with `Tools` has been used to perform the statistical interpretation. </sup></h4>  
+<h4 align="center"><sub>Figure 8: Upper limits computed at 95% CL on the production rate of the hypothetical particle. The data selection obtained with `Tools` has been used to perform the statistical interpretation. Source [1,6]. </sup></h4>  
 
 
 <br/><br/>
@@ -451,13 +450,13 @@ You can create different channels by scanning the values of the variables of int
 
 The tool has been used to produce the official results of the following paper publications:
 
-- [JHEP 02 (2024) 107](https://inspirehep.net/literature/2673888): Search for pair production of squarks or gluinos decaying via sleptons or weak bosons in final states with two same-sign or three leptons with the ATLAS detector.
-- [JHEP 07 (2023) 203](https://link.springer.com/article/10.1007/JHEP07(2023)203): Search for $t\bar tH/A \rightarrow t\bar tt\bar t$ production in the multilepton final state in proton-proton collisions at $\sqrt s =13$ TeV with the ATLAS detector.
-- [JHEP 11 (2023) 150 ](https://link.springer.com/article/10.1007/JHEP11(2023)150): Search for direct production of winos and higgsinos in events with two same-charge leptons or three leptons in pp collision data at $\sqrt s =13$ TeV with the ATLAS detector.
-- [JHEP 06 (2020) 046](https://link.springer.com/article/10.1007/JHEP06(2020)046): Search for squarks and gluinos in final states with same-sign leptons and jets using 139 $fb^{−1}$ of data collected with the ATLAS detector.
-- [Phys. Rev. D 100 (2019) 012006](https://inspirehep.net/literature/1711261): Search for chargino and neutralino production in final states with a Higgs boson and missing transverse momentum at $\sqrt s =13$ TeV with the ATLAS detector.
-- [JHEP 06 (2018) 166](https://link.springer.com/article/10.1007/JHEP06(2018)166): Search for Higgs boson decays to beyond-the-Standard-Model light bosons in four-lepton events with the ATLAS detector $\sqrt s =13$ TeV.
-- [Phys. Rev. D 92 (2015) 092001](https://inspirehep.net/literature/1373520): Search for new light gauge bosons in Higgs boson decays to four-lepton final states in $pp$ collisions at $\sqrt s =13$ TeV with the ATLAS detector at the LHC.
+- [[1] JHEP 02 (2024) 107](https://inspirehep.net/literature/2673888): Search for pair production of squarks or gluinos decaying via sleptons or weak bosons in final states with two same-sign or three leptons with the ATLAS detector.
+- [[2] JHEP 07 (2023) 203](https://link.springer.com/article/10.1007/JHEP07(2023)203): Search for $t\bar tH/A \rightarrow t\bar tt\bar t$ production in the multilepton final state in proton-proton collisions at $\sqrt s =13$ TeV with the ATLAS detector.
+- [[3] JHEP 11 (2023) 150 ](https://link.springer.com/article/10.1007/JHEP11(2023)150): Search for direct production of winos and higgsinos in events with two same-charge leptons or three leptons in pp collision data at $\sqrt s =13$ TeV with the ATLAS detector.
+- [[4] JHEP 06 (2020) 046](https://link.springer.com/article/10.1007/JHEP06(2020)046): Search for squarks and gluinos in final states with same-sign leptons and jets using 139 $fb^{−1}$ of data collected with the ATLAS detector.
+- [[5] Phys. Rev. D 100 (2019) 012006](https://inspirehep.net/literature/1711261): Search for chargino and neutralino production in final states with a Higgs boson and missing transverse momentum at $\sqrt s =13$ TeV with the ATLAS detector.
+- [[6] JHEP 06 (2018) 166](https://link.springer.com/article/10.1007/JHEP06(2018)166): Search for Higgs boson decays to beyond-the-Standard-Model light bosons in four-lepton events with the ATLAS detector $\sqrt s =13$ TeV.
+- [[7] Phys. Rev. D 92 (2015) 092001](https://inspirehep.net/literature/1373520): Search for new light gauge bosons in Higgs boson decays to four-lepton final states in $pp$ collisions at $\sqrt s =13$ TeV with the ATLAS detector at the LHC.
 
 
 
