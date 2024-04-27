@@ -1,4 +1,4 @@
-<!-- START doctoc -->
+
 
 ## Introduction
 This tool was developed to perform data selection and data visualization, and it has been used to analyze the data taken by the *ATLAS* detector from the proton-proton collisions at the *Large Hadron Collider (LHC)* at *CERN*. The tool has been developed on top of the [ROOT Data Analysis Framework](https://root.cern/), a high-performance software written mainly in C++. 
@@ -460,7 +460,7 @@ The tool has been used to produce the official results of the following paper pu
 - [[6] JHEP 06 (2018) 166](https://link.springer.com/article/10.1007/JHEP06(2018)166): Search for Higgs boson decays to beyond-the-Standard-Model light bosons in four-lepton events with the ATLAS detector $\sqrt s =13$ TeV.
 - [[7] Phys. Rev. D 92 (2015) 092001](https://inspirehep.net/literature/1373520): Search for new light gauge bosons in Higgs boson decays to four-lepton final states in $pp$ collisions at $\sqrt s =13$ TeV with the ATLAS detector at the LHC.
 
-<!-- END doctoc -->
+
 
 
 
