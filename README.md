@@ -246,7 +246,7 @@ Examples of the default 1D distributions can be seen in Figure 1.   By default, 
 <a href="url"><img src="https://github.com/dparedesh/baseline-framework/assets/13987503/1f626a01-fa09-49a6-834b-faca2d1efd1f" align="center" height="210"  ></a>
 <a href="url"><img src="https://github.com/dparedesh/baseline-framework/assets/13987503/273f3723-bb4d-4a4c-a1c5-02fbdf8fbd39" align="center" height="210"  ></a>
 </p>
-<h4 align="center"><sub>Figure 1: Examples of the default 1D distributions created with `Tools`. The signal is represented by the blue dotted line. Source [7].  </sup></h4>  
+<h4 align="center"><sub>Figure 1: Examples of the default 1D distributions created with `Tools`. The signal is represented by the blue dotted line. Source [5].  </sup></h4>  
 
  <br/><br/> 
 
@@ -454,11 +454,11 @@ The tool has been used to produce the official results of the following paper pu
 
 - [[1] JHEP 02 (2024) 107](https://inspirehep.net/literature/2673888): Search for pair production of squarks or gluinos decaying via sleptons or weak bosons in final states with two same-sign or three leptons with the ATLAS detector.
 - [[2] JHEP 07 (2023) 203](https://link.springer.com/article/10.1007/JHEP07(2023)203): Search for $t\bar tH/A \rightarrow t\bar tt\bar t$ production in the multilepton final state in proton-proton collisions at $\sqrt s =13$ TeV with the ATLAS detector.
-- [[3] JHEP 11 (2023) 150 ](https://link.springer.com/article/10.1007/JHEP11(2023)150): Search for direct production of winos and higgsinos in events with two same-charge leptons or three leptons in pp collision data at $\sqrt s =13$ TeV with the ATLAS detector.
+- [[3] JHEP 11 (2023) 150 ](https://link.springer.com/article/10.1007/JHEP11(2023)150): Search for direct production of winos and higgsinos in events with two same-charge leptons or three leptons in $pp$ collision data at $\sqrt s =13$ TeV with the ATLAS detector.
 - [[4] JHEP 06 (2020) 046](https://link.springer.com/article/10.1007/JHEP06(2020)046): Search for squarks and gluinos in final states with same-sign leptons and jets using 139 $fb^{−1}$ of data collected with the ATLAS detector.
 - [[5] Phys. Rev. D 100 (2019) 012006](https://inspirehep.net/literature/1711261): Search for chargino and neutralino production in final states with a Higgs boson and missing transverse momentum at $\sqrt s =13$ TeV with the ATLAS detector.
 - [[6] JHEP 06 (2018) 166](https://link.springer.com/article/10.1007/JHEP06(2018)166): Search for Higgs boson decays to beyond-the-Standard-Model light bosons in four-lepton events with the ATLAS detector $\sqrt s =13$ TeV.
-- [[7] Phys. Rev. D 92 (2015) 092001](https://inspirehep.net/literature/1373520): Search for new light gauge bosons in Higgs boson decays to four-lepton final states in $pp$ collisions at $\sqrt s =13$ TeV with the ATLAS detector at the LHC.
+- [[7] Phys. Rev. D 92 (2015) 092001](https://inspirehep.net/literature/1373520): Search for new light gauge bosons in Higgs boson decays to four-lepton final states in $pp$ collisions at $\sqrt s =8$ TeV with the ATLAS detector at the LHC.
 
 
 
