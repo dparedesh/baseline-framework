@@ -246,7 +246,7 @@ Examples of the default 1D distributions can be seen in Figure 1.   By default, 
 <a href="url"><img src="https://github.com/dparedesh/baseline-framework/assets/13987503/1f626a01-fa09-49a6-834b-faca2d1efd1f" align="center" height="210"  ></a>
 <a href="url"><img src="https://github.com/dparedesh/baseline-framework/assets/13987503/273f3723-bb4d-4a4c-a1c5-02fbdf8fbd39" align="center" height="210"  ></a>
 </p>
-<h4 align="center"><sub>Figure 1: Examples of the default 1D distributions created with `Tools`. The signal is represented by the blue dotted line. Source [5].  </sup></h4>  
+<p align="center"><sub>Figure 1: Examples of the default 1D distributions created with `Tools`. The signal is represented by the blue dotted line. Source [5].  </sup></p>  
 
  <br/><br/> 
 
@@ -264,7 +264,7 @@ in the `MiniTreeAnalyzer`. An example showing the result can be seen in Figure 2
 <a href="url"><img src="https://github.com/dparedesh/baseline-framework/assets/13987503/a37d261b-f24d-45e4-a36e-f1ee8a46279d" align="center" height="190"  ></a>
 <a href="url"><img src="https://github.com/dparedesh/baseline-framework/assets/13987503/d4f9488a-2086-4d58-95a3-4e6ccd2daca3" align="center" height="200"  ></a>
 </p>
-<h4 align="center"><sub>Figure 2: Examples of 1D distributions created with `Tools` using stacked signal hypothesis. The signal is represented by shaded histograms stacked on top of the total background. Source [6]. </sup></h4>  
+<p align="center"><sub>Figure 2: Examples of 1D distributions created with `Tools` using stacked signal hypothesis. The signal is represented by shaded histograms stacked on top of the total background. Source [6]. </sup></p>  
 
 
 <br/><br/> 
@@ -282,7 +282,7 @@ The resulting plot is shown at the bottom of the canvas in Figure 3.
 <a href="url"><img src="https://github.com/dparedesh/baseline-framework/assets/13987503/3aeff934-ba9a-4d0a-912f-631d23396d90" align="center" height="230"  ></a>
 <a href="url"><img src="https://github.com/dparedesh/baseline-framework/assets/13987503/144ecb0e-fa0e-4f27-8a68-de618f01d632" align="center" height="230"  ></a>
 </p>
-<h4 align="center"><sub>Figure 3: Examples of 1D distributions created with `Tools` showing the ratio of the  data and the total background. Source [5]. </sup></h4>  
+<p align="center"><sub>Figure 3: Examples of 1D distributions created with `Tools` showing the ratio of the  data and the total background. Source [5]. </sup></p>  
 
 
 <br/><br/> 
@@ -300,7 +300,7 @@ The resulting plot is shown in Figure 4.
 <a href="url"><img src="https://github.com/dparedesh/baseline-framework/assets/13987503/0840a069-6610-491f-a4c0-954371be8123" align="center" height="200"  ></a>
 <a href="url"><img src="https://github.com/dparedesh/baseline-framework/assets/13987503/3506e95d-1d61-47f7-9c27-ff7ba7e92b05" align="center" height="200"  ></a>
 </p>
-<h4 align="center"><sub>Figure 4: Examples of 1D distributions created with `Tools` showing the significance of observing `n` data events given the background prediction in each bin of the histogram. Source [7]. </sup></h4>  
+<p align="center"><sub>Figure 4: Examples of 1D distributions created with `Tools` showing the significance of observing `n` data events given the background prediction in each bin of the histogram. Source [7]. </sup></p>  
 
 
 <br/><br/>
@@ -323,7 +323,7 @@ The final plots will look like the ones shown in Figure 5.
 <a href="url"><img src="https://github.com/dparedesh/baseline-framework/assets/13987503/36015733-235e-4a1f-b921-04f2ac1cbb11" align="center" height="210"  ></a>
 <a href="url"><img src="https://github.com/dparedesh/baseline-framework/assets/13987503/4840fcf6-9bf3-4be1-8fc2-1fb940699959" align="center" height="210"  ></a>
 </p>
-<h4 align="center"><sub>Figure 5: Examples of 1D distributions showing the shape comparison of the different physics processes. Distributions are normalized to unit. Source [2]. </sup></h4>  
+<p align="center"><sub>Figure 5: Examples of 1D distributions showing the shape comparison of the different physics processes. Distributions are normalized to unit. Source [2]. </sup></p>  
 
 
 <br/><br/>
@@ -342,7 +342,7 @@ Examples of 2D distributions obtained with the tool are shown in Figure 6.
 <a href="url"><img src="https://github.com/dparedesh/baseline-framework/assets/13987503/9b35bca8-c513-4090-952f-b31c17fa4e20" align="center" height="220"  ></a>
 <a href="url"><img src="https://github.com/dparedesh/baseline-framework/assets/13987503/83a33a45-6637-4d92-bbe9-7ebff2f538a0" align="center" height="220"  ></a>
 </p>
-<h4 align="center"><sub>Figure 6: Examples of 2D distributions created with `Tools`. Source [7]. </sup></h4>  
+<p align="center"><sub>Figure 6: Examples of 2D distributions created with `Tools`. Source [7]. </sup></p>  
 
 <br/><br/>
 
@@ -358,7 +358,7 @@ where `folder` indicates the directory where the tables will be saved.  The tabl
 <p align="center">
 <a href="url"><img src="https://github.com/dparedesh/baseline-framework/assets/13987503/f996f866-c13d-4270-a743-cac5c9692715" align="center" height="180"  ></a>
 </p>
-<h4 align="center"><sub>Figure 7: Table generated with `Tools` containing the nominal event counting and its statistical and systematic uncertainty. Values are computed for every  process and for every decay channel (data selection). The total expected background is also computed. The number of observed events in data is also shown. </sup></h4>  
+<p align="center"><sub>Figure 7: Table generated with `Tools` containing the nominal event counting and its statistical and systematic uncertainty. Values are computed for every  process and for every decay channel (data selection). The total expected background is also computed. The number of observed events in data is also shown. </sup></p>  
 
 
 
@@ -443,7 +443,7 @@ You can create different channels by scanning the values of the variables of int
 <a href="url"><img src="https://github.com/dparedesh/baseline-framework/assets/13987503/1ca9275d-2c23-4309-b0a3-89a32b0e874e" align="center" height="220"  ></a>
 <a href="url"><img src="https://github.com/dparedesh/baseline-framework/assets/13987503/837b2115-7362-498c-8cd3-0b06f0ac7dc2" align="center" height="220"  ></a>      
 </p>
-<h4 align="center"><sub>Figure 8: Upper limits computed at 95% CL on the production rate of the hypothetical particle. The data selection obtained with `Tools` has been used to perform the statistical interpretation. Source [1,6]. </sup></h4>  
+<p align="center"><sub>Figure 8: Upper limits computed at 95% CL on the production rate of the hypothetical particle. The data selection obtained with `Tools` has been used to perform the statistical interpretation. Source [1,6]. </sup></p>  
 
 
 <br/><br/>
